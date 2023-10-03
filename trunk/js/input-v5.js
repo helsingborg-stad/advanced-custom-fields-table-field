@@ -129,7 +129,9 @@
 				mutationsList.forEach((mutation) => {
 					if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
 						mutation.addedNodes.forEach((addedNode) => {
-							if (addedNode instanceof HTMLElement && addedNode.hasAttribute('data-type') && addedNode.getAttribute('data-type') == 'acf/table') {
+							if (addedNode instanceof HTMLElement && 
+								addedNode.hasAttribute('data-type') && 
+								addedNode.getAttribute('data-type') == 'acf/table') {
 								console.log("runs");
 								t.each_table(addedNode);
 							}
